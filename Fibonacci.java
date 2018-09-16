@@ -3,14 +3,14 @@ package Fibonacci;
 import java.util.Scanner;
 
 /**
- * 面试过程中，问道这个题目，突然间脑袋抽抽，啥也不知道了，等回到租屋，闭关10分钟， 搞出来后，那叫一个愁回百转，算了，记下这个经历吧。
+ * 以前没写过for-loop的Fibonacci数列，感觉挺有趣，突然想写一下
  * Author：Arthur Leo 2018-09-12
  */
 public class Fibonacci {
 
 	public static void main(String[] args) {
-		Scanner scanner = new Scanner(System.in);
-		int num = scanner.nextInt();
+		Scanner scanner = new Scanner(System.in);//IO Stream as input argument
+		int num = scanner.nextInt();//abtain int value
 		Fib(num);
 	}
 	/**
@@ -27,6 +27,10 @@ public class Fibonacci {
 			return;
 		}
 		System.out.print(1 + " " + 1 + " ");
+		/**
+		 * define sum parameter as  the last two arguments' sum of each operation,
+		 * then copy a to b as b of the next operation,and copy the sum to a as a of the next operation
+		 * */
 		for (int i = 3; i <= n; ++i) {
 			sum = a + b;
 			b = a;
